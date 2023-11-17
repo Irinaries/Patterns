@@ -39,7 +39,7 @@ public class DeliveryTest {
         $("[data-test-id=date] input").doubleClick().sendKeys(DataGenerator.generateDate(7));
         $(".button").click();
         $(byText("Запланировать")).click();
-        $(byText("Успешно")).shouldBe(visible, Duration.ofSeconds(30));
+        $(byText("Успешно")).shouldBe(visible, Duration.ofSeconds(15));
         $("[data-test-id='success-notification'].notification__content")
                 .shouldHave(exactText("Встреча успешно запланирована на " + firstMeetingDate))
                 .shouldBe(visible);
